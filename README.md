@@ -21,7 +21,7 @@
 
     `pip install requirements.txt`
     
-Now you have all you need!
+        Now you have all you need!
     
 ### Experimantation
 
@@ -35,4 +35,4 @@ Now you have all you need!
 
     `python run.py`
     
-    Have fun!
+        Have fun!
