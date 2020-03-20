@@ -9,10 +9,12 @@ def vetorize_to_file(arr, name, path, mi = 50, ma = 10000):
     with open(path + name + '.txt', 'w') as file:
         file.write('[')
         for i in range(len(arr)):
+            num = (arr[i]/divisor)*(ma - mi) + mi 
+            num = float(int(num*10))/10
             if i == len(arr)-1:
-                file.write(str((arr[i]/divisor)*(ma - mi) + mi ) + ']')
+                file.write(str(num) + ']')
             else:
-                file.write(str((arr[i]/divisor)*(ma - mi) + mi ) + ', ')
+                file.write(str(num) + ', ')
 
 def resize_image(max_h, max_w, img):
     
@@ -33,8 +35,7 @@ if __name__ == '__main__':
 	# Padroes de configuração
 	PATH = 'experiencias/' + input('Digite o nome da pasta da experiência (exemplo: exp1):\n>> ') + '/'
 	IMG_NAME = input('Digite o nome da imagem (exemplo: img_padrao.png):\n>> ')
-	MAX_HEIGHT = 75
-	MAX_WIDTH = 75
+	MAX_HEIGHT = MAX_WIDTH = 50
 
 	# Kernels
 	kernel_edge_1 = np.array([np.array(
